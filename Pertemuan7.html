@@ -1,0 +1,61 @@
+<html>
+    <head>
+        <title> Latihan If dan Loop</title>
+    </head>
+    <body>
+        <script>
+            const score = 85;
+            let grade;
+
+            if (score >= 90) {
+                grade = "A";
+            } else if (score >= 80) {
+                grade = "B";
+            } else if (score >= 70) {
+                grade = "C";
+            } else if (score >= 60) {
+                grade = "D";
+            } else {
+                grade = "E";
+            }
+
+            document.writeln("Your grade is : " + grade)
+            
+
+            switch (grade) {
+                case 'A':
+                case 'B':
+                case 'C':
+                    message = " Well done </br>";
+                    break;
+                case 'D':
+                case 'E':
+                    message = " You Passed </br>";
+                    break;
+                case "F":
+                    message = " Invalid Grade </br> ";
+            }
+            document.writeln(message);
+
+            document.writeln("Menggunakan For </br>" );
+            for (i = 1; i < 6; i++) {
+                document.writeln("Number : " + i + "</br>");
+            }
+
+            document.writeln("Menggunakan While </br>")
+            i = 1;
+            while(i < 6) {
+                document.writeln("Number : " + i + "<br>");
+                i++;
+            }
+
+            document.writeln("Menggunakan Do While </br>");
+            i = 1;
+            do {
+                document.writeln("Number : " + i + "</br>");
+                i++;
+            } while (i < 6);
+
+        </script>
+    </body>
+</html>
