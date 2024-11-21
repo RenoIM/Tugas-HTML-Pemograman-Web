@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <title>Pertemuan 8 Function</title>
+    </head>
+    <body>
+        <script>
+
+            //function
+            function testing () {
+                document.write("testing </br> </br>");
+            }
+            testing();
+            testing();
+
+            //FunctionParameter
+            function testparameter (awal, akhir = "") {
+                document.write(`Meng Halo ` + awal + " " + akhir + `</br>` );
+            }
+            testparameter('Jonny', 'Setiawan');
+            testparameter('Ardian');
+
+            //FunctionInFunction
+            function outerfunction(outerfunction) {
+                function innerfuntion(innerfuntion) {
+                    document.write("Outer Variable: " + outerfunction);
+                    document.write("inner Variable: " + innerfuntion);
+                }
+                innerfuntion("Inner");
+            }
+            outerfunction("Outer")
+
+            //Arrow Function
+            const greet = (name) => {
+                document.write("Hello, " + name + "! </br>");
+            };
+            greet("Tes");
+
+            //Closure
+            function outerfunction(outerfunction) {
+                return function innerfuntion(innerfuntion) {
+                    document.write("Outer Variable: " + outerfunction + "</br>");
+                    document.write("Inner variable: " + innerfuntion + "</br>");
+                };
+            }
+            const newFunction = outerfunction("Outer");
+            newFunction("Inner");
+            newFunction("Outer"); 
+        </script>
+    </body>
+</html>
