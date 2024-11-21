@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>Contoh dari JS DOM</title>
+    </head>
+    <body>
+        <h1 id="header">Hello, World</h1>
+        <h1 id="test">Testing</h1>
+        <button onclick="changetext()">change Text</button>
+        <button onclick="add()">Add Text</button>
+
+        <script>
+            //
+            function changetext() {
+                document.getElementById("header").innerHTML ="Hello Javascript";
+                document.getElementById("test").innerHTML ="Tester";
+            }
+
+            function add() {
+                var element = document.createElement("div");
+                element.innerHTML = "Hello, Element!";
+                document.body.appendChild(element);
+            }
+
+            var button = document.querySelector("button")
+            button.addEventListener("click", function() {
+                alert("Button was clicked");
+            });
+            
+
+        </script>
+    </body>
+</html>
